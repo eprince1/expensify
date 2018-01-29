@@ -1,5 +1,4 @@
 import * as firebase from 'firebase';
-import { setTimeout } from 'timers';
 
 const config = {
     apiKey: "AIzaSyATL5S6hzWzdbWPQy0tcvf8xR1KPUKtk08",
@@ -13,8 +12,9 @@ const config = {
 firebase.initializeApp(config);
 
 const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export { firebase, database as default };
+export { firebase, googleAuthProvider, database as default };
 
 
 
